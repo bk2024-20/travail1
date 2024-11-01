@@ -1,0 +1,46 @@
+
+.partner-logos {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Distribute logos evenly */
+  margin: 0 auto; /* Center the logos horizontally */
+  padding: 1rem; /* Add some spacing */
+}
+
+.logo {
+  width: calc(25% - 1rem); /* Calculate logo width dynamically */
+  margin-bottom: 1rem; /* Space between logos */
+  overflow: hidden; /* Prevent image overflow */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.logo:hover {
+  background-color: #768694; /* Light blue hover effect */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.logo img {
+  width: 100%; /* Ensure images fill the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Crop images if necessary */
+}
+
+/* Media Queries for Responsive Layout */
+
+@media (max-width: 768px) {
+  .partner-logos {
+    flex-wrap: wrap; /* Wrap logos on smaller screens */
+  }
+
+  .logo {
+    width: calc(50% - 1rem); /* Adjust width for two logos per row */
+    margin-bottom: 0.5rem; /* Reduce spacing on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 100%; /* One logo per row on very small screens */
+  }
+}
